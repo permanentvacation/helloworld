@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catch the 3G Logo</title>
+  <title>3G Snake</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <h1>3G Snake</h1>
+  <div class="scores">
     <div>Score: <span id="score">0</span></div>
-    <div>Time: <span id="time">30</span></div>
     <div>Best: <span id="best">0</span></div>
-  </header>
+  </div>
 
-  <main id="board">
-    <button id="target" class="target" aria-label="3G logo" hidden>
-      <span class="target-3g">3G</span>
-      <span class="target-text">Hello World</span>
-    </button>
-
+  <div class="wrap">
+    <canvas id="game" width="400" height="400"></canvas>
     <div id="overlay" class="overlay">
-      <h1>Catch the 3G Logo</h1>
-      <p id="message">Click the spinning logo as many times as you can in 30 seconds. It gets faster as you score!</p>
+      <p id="message">Use the arrow keys, WASD or swipe to steer.</p>
       <button id="start" class="start">Start</button>
     </div>
-  </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
