@@ -81,6 +81,7 @@ aside {
 }
 
 .start,
+.mute,
 .pad button {
   font-family: inherit;
   font-weight: 700;
@@ -98,8 +99,14 @@ aside {
 }
 
 .start:hover,
+.mute:hover,
 .pad button:hover {
   background: #1a85ff;
+}
+
+.mute {
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 .pad {
