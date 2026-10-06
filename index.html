@@ -3,22 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3G Snake</title>
+  <title>3G Tetris</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>3G Snake</h1>
-  <div class="scores">
-    <div>Score: <span id="score">0</span></div>
-    <div>Best: <span id="best">0</span></div>
+  <h1>3G Tetris</h1>
+
+  <div class="game">
+    <div class="wrap">
+      <canvas id="board" width="240" height="480"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="message">Arrows or WASD to move and rotate, space to drop, P to pause.</p>
+        <button id="start" class="start">Start</button>
+      </div>
+    </div>
+
+    <aside>
+      <div class="stat">Score<span id="score">0</span></div>
+      <div class="stat">Lines<span id="lines">0</span></div>
+      <div class="stat">Level<span id="level">1</span></div>
+      <div class="stat">Best<span id="best">0</span></div>
+      <div class="stat">Next<canvas id="next" width="80" height="80"></canvas></div>
+    </aside>
   </div>
 
-  <div class="wrap">
-    <canvas id="game" width="400" height="400"></canvas>
-    <div id="overlay" class="overlay">
-      <p id="message">Use the arrow keys, WASD or swipe to steer.</p>
-      <button id="start" class="start">Start</button>
-    </div>
+  <div class="pad">
+    <button data-act="left">&larr;</button>
+    <button data-act="rotate">&#8635;</button>
+    <button data-act="right">&rarr;</button>
+    <button data-act="down">&darr;</button>
+    <button data-act="drop">Drop</button>
   </div>
 
   <script src="script.js"></script>
